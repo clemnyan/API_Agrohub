@@ -30,21 +30,8 @@ const StateSchema = new Schema({
     November: Number,
     December: Number,
   },
-  sunshine: {
-    January: Number,
-    February: Number,
-    March: Number,
-    April: Number,
-    May: Number,
-    June: Number,
-    July: Number,
-    August: Number,
-    September: Number,
-    October: Number,
-    November: Number,
-    December: Number,
-  },
-  pests: String,
+  sunshine: String,
+  pestsAndDiseases: String,
   geology: String,
   crops: [{
     type: Schema.ObjectId,
@@ -55,11 +42,6 @@ const StateSchema = new Schema({
     ref: 'Livestock',
   }],
   details: String,
-  irrigation: String,
-  population: Number,
-  gdp: Number,
-  costOfLand: String,
-  potential: String,
 });
 
 const StateModel = mongoose.model('State', StateSchema);
